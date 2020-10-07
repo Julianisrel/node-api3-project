@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.post('/', (req, res) => {
-  // do your magic!
+  //do your magic!
 });
 
 router.post('/:id/posts', (req, res) => {
