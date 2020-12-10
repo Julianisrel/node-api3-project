@@ -1,16 +1,16 @@
 <!-- MIDDLEWARE  -->
 
--  Functions that extend middle software 
+-  Functions that extend middle software
 
 - used to add features to express
 
 - The biggest feature of Express
 
--   Most code we write, including route handlesrs, is middleware.
-can be considred an array of functiosn that get excuted in the order they are introduced into the sever code.
+-   Most code we write, including route handlers, is middleware.
+can be considered an array of function that get executed in the order they are introduced into the sever code.
 
 <!-- More on middle  -->
-- Express middeware is complatibnle with connect middle
+- Express middleware is complatibnle with connect middle
 
 Connect is a web app framework for NODE.js that only provides the middleware layer
 
@@ -25,7 +25,7 @@ Connect is a web app framework for NODE.js that only provides the middleware lay
 
  - Third-party middleware.    
 
- - Custom middleware.
+ - Custom middleware - 
 
  - Built-in middleware is included with Express, but not added to the application automatically. Like the other types, we need to opt-in to using it in our application.
 
@@ -34,7 +34,7 @@ Connect is a web app framework for NODE.js that only provides the middleware lay
 
  Some popular middleware modules are THAT I'LL BE USING
 
-morgan.  - is an http request logger for node it logs out a line in the console with some deatls everytome somene makes a request to the api.
+Morgan.  - is an http request logger for node it logs out a line in the console with some details everytime someone makes a request to the api.
 
 CORS. -
 
@@ -45,4 +45,5 @@ CUSTOM MIDDLEWARE
 if seaching for that one package that doesn't exist? write your own \
 
 
-MIDDLEWARE - are just funcitons that we write to perform certain tasks.
+MIDDLEWARE - are just Functions that we write to perform certain tasks.
+middle ware function are async meaning we have to specically tell express when are middleware function is done and ready to move on to the next piece of middleware

@@ -1,28 +1,22 @@
-const express = require("express")
-// const morgan = require("morgan")
-const deny = require("./middleware/deny")
-const logger = require("./middleware/logger")
-const welcomeRouter = require("./welcome/welcome-router")
-const usersRouter = require("./users/users-router")
+const express = require('express');
+const userRouter = require('./users/userRouter');
+const logger = require('./middleware/logger');
 
-const server = express()
-const port = 4000
+const server = express();
+const port = process.env.PORT || 4000;
 
-server.use(express.json())
-// server.use(morgan("combined"))
-// server.use(deny())
-server.use(logger("long"))
+server.use(express.json());
+server.use(logger());
 
-server.use(welcomeRouter)
-server.use(usersRouter)
+server.use(userRouter);
 
 server.use((err, req, res, next) => {
-	console.log(err)
-	res.status(500).json({
-		message: "Something went wrong, please try again later",
-	})
+    console.log(err);
+    res.status(500).json({
+        message: 'Something went wrong, please try later, or contact us.'
+    })
 })
 
 server.listen(port, () => {
-	console.log(`Server running at http://localhost:${port}`)
+    console.log(`Server listening on ${port}`)
 })
